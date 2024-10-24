@@ -1,0 +1,95 @@
+/* 1. Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 2. Typography */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+}
+
+/* 3. Colors */
+h1 {
+    color: #333;
+}
+
+p {
+    color: #555;
+    background-color: #f2f2f2;
+}
+
+/* 4. Box Model */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* 5. Positioning */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+}
+
+/* 6. Flexbox */
+.flex-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+}
+
+/* 7. Grid */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.grid-item {
+    background-color: lightblue;
+    padding: 20px;
+    text-align: center;
+}
+
+/* 8. Pseudo-class & Pseudo-element */
+a:hover {
+    color: red;
+}
+
+p::first-line {
+    font-weight: bold;
+}
+
+/* 9. Animations */
+@keyframes slidein {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+.slide {
+    animation: slidein 2s ease-in-out;
+}
+
+/* 10. Media Queries */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+}
